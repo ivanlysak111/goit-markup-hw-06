@@ -424,9 +424,13 @@
           </svg>
         </button>
         <h2>Leave your contacts and we will call you back</h2>
-        <form name="contact-form" autocomplete="off">
+        <form name="contact-form" autocomplete="off" novalidate>
           <label for="user-name">Name</label>
           <input id="user-name" type="text" name="user-name" />
+          <label for="user-phone">Phone</label>
+          <input id="user-phone" type="tel" name="user-phone" />
+          <label for="user-email">Email</label>
+          <input id="user-email" type="email" name="user-email" />
           <input type="checkbox" id="privacy-policy" name="privacy-policy" />
           <label for="privacy-policy"
             >I accept the terms and conditions of the Privacy Policy</label
@@ -439,6 +443,8 @@
             placeholder="Text input"
             res
           ></textarea>
+
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
