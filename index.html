@@ -369,7 +369,7 @@
     <footer class="footer">
       <div class="container">
         <ul class="footer-list-one">
-          <li>
+          <li class="footer-list-item">
             <a class="logo links logo-footer" href="#"
               ><span class="heder-logo">Web</span
               ><span class="footer-logo">Studio</span></a
@@ -379,7 +379,7 @@
               digital marketing & growth solutions.
             </p>
           </li>
-          <li>
+          <li class="footer-list-item">
             <p class="footer-paragraph-two">Social media</p>
             <ul class="footer-list-two">
               <li class="footer-item">
@@ -413,9 +413,31 @@
               </li>
             </ul>
           </li>
+          <li class="footer-list-item">
+            <div class="footer-div3">
+              <p class="footer-title-form">Subscribe</p>
+              <form class="footer-form">
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="E-mail"
+                  class="input-footer"
+                />
+                <button type="submit" class="footer-form-btn">
+                  Subscribe
+                  <svg class="footer-icon-send" width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </li>
         </ul>
       </div>
     </footer>
+
+    <!-- ---------------Modal----------------- -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
@@ -423,29 +445,92 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2>Leave your contacts and we will call you back</h2>
-        <form name="contact-form" autocomplete="off" novalidate>
-          <label for="user-name">Name</label>
-          <input id="user-name" type="text" name="user-name" />
-          <label for="user-phone">Phone</label>
-          <input id="user-phone" type="tel" name="user-phone" />
-          <label for="user-email">Email</label>
-          <input id="user-email" type="email" name="user-email" />
-          <input type="checkbox" id="privacy-policy" name="privacy-policy" />
-          <label for="privacy-policy"
-            >I accept the terms and conditions of the Privacy Policy</label
-          >
-          <label for="user-comment">Comment</label>
-          <textarea
-            class="user-comment"
-            name="user-comment"
-            id="user-comment"
-            placeholder="Text input"
-            res
-          ></textarea>
+        <div class="form-wrap">
+          <h2 class="modal-title">
+            Leave your contacts and we will call you back
+          </h2>
 
-          <button type="submit">Send</button>
-        </form>
+          <form name="contact-form" autocomplete="off" novalidate>
+            <div class="user-infofmation">
+              <ul>
+                <li class="form-item">
+                  <label for="user-name" class="user-lable">Name</label>
+                  <div class="modal-item-icon">
+                    <input
+                      id="user-name"
+                      type="text"
+                      name="user-name"
+                      class="user-input"
+                    />
+                    <svg class="modal-icon" width="18" height="24">
+                      <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
+                  </div>
+                </li>
+
+                <li class="form-item">
+                  <label for="user-phone" class="user-lable">Phone</label>
+                  <div class="modal-item-icon">
+                    <input
+                      id="user-phone"
+                      type="tel"
+                      name="user-phone"
+                      class="user-input"
+                    />
+                    <svg class="modal-icon" width="18" height="24">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                  </div>
+                </li>
+
+                <li class="form-item">
+                  <label for="user-email" class="user-lable">Email</label>
+                  <div class="modal-item-icon">
+                    <input
+                      id="user-email"
+                      type="email"
+                      name="user-email"
+                      class="user-input"
+                    />
+                    <svg class="modal-icon" width="18" height="24">
+                      <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
+                  </div>
+                </li>
+
+                <li class="form-item">
+                  <label for="user-comment" class="user-lable">Comment</label>
+
+                  <textarea
+                    class="user-input user-comment"
+                    name="user-comment"
+                    id="user-comment"
+                    placeholder="Text input"
+                    res
+                  ></textarea>
+                </li>
+              </ul>
+            </div>
+
+            <div class="checkbox-div">
+              <label class="checkbox-text">
+                <input
+                  type="checkbox"
+                  class="visually-hidden modal-checkbox"
+                  value="agree"
+                />
+                <span class="checked-icon">
+                  <svg class="icon-agree" width="16" height="16">
+                    <use href="./images/icons.svg#icon-agree"></use>
+                  </svg> </span
+                >I accept the terms and conditions of the&nbsp
+                <a href="" class="checked-link">Privacy Policy</a>
+              </label>
+            </div>
+
+            <button type="submit" class="modal-btn">Send</button>
+          </form>
+        </div>
       </div>
     </div>
 
